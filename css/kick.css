@@ -1848,6 +1848,18 @@ width:400px;
 	padding-right: 20px;
 }
 
+.privacy{
+	font-size: 15px;
+	font-weight: 400px;
+		max-width: 800px;
+	font-weight: 300;
+	text-align: left;
+	margin: auto auto;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .subheaders2{
 	font-size: 25px;
 	font-weight: 400px;
