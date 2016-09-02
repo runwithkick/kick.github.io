@@ -287,17 +287,10 @@ Parse.initialize(
 );
 Parse.serverURL = 'https://pg-app-02wy7n5kpakwpd0x1egajq7s75etfe.scalabl.cloud/1/';
 
-Parse.Cloud.run('GETfromCloud', {
-  Clientid: clientid,
-  Shopifyid: shopifyid,
-  Trackerid: trackerid,
-}, {
-        success: function(result) {
-        },
-        error: function(error) {
-        
-        }
-      });
+var NewEmail = Parse.Object.extend("EmailList");
+var newEmail = new NewEmail();
+
+newEmail.set("emailAddress", emailAddress);
 
 
 </script> 
