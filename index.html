@@ -152,6 +152,25 @@
 
 <p class="subheaders">Coming soon, Kick is a completely new approach to buying your running gear. The more you run, the more discount you earn. Enter your email address below for updates.</p>
 
+<div class="maincontain">
+<div class="row coltext">
+  <div class="col-sm-4">
+    <p class="mainheaders">Link your Tracker</p>
+      <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/twitterstar.png" height="124" /img>
+    <p class="maincontent">When you've <a href="http://www.runwithkick.com/getstarted" target="_blank">signed up</a>, you'll enter the weekly race from Monday onwards by either favoriting the weekly race tweet, or via the <a href="http://www.runwithkick.com/enter" target="_blank">enter page</a>.</p> 
+  </div>
+  <div class="col-sm-4">
+    <p class="mainheaders">Run</p>
+      <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/kick-sheffield-commercial-photographer-127a.png" /img>
+    <p class="maincontent">You'll run your 5km race, logging it how you want to (e.g. Parkrun, Strava, Garmin), and <a href="http://www.runwithkick.com/submit" target="_blank">send</a> your time before noon GMT on Sunday. Integration with your favorite run tracker coming soon!</p>
+  </div>
+  <div class="col-sm-4">
+    <p class="mainheaders">Great Discounts</p>
+      <img src="https://dl.dropboxusercontent.com/u/10455351/Assets/vest4a.png" height="124" /img>
+    <p class="maincontent">Monday is <a href="http://www.runwithkick.com/results" target="_blank">results</a> day, and you'll win points based on your results and collect badges (we call them <a href="http://www.runwithkick.com/vests" target="_blank"> vests</a>) along the way. Then it all happens again the following week...</p>
+  </div>
+</div>
+</div>
 
 <!-- Begin MailChimp Signup Form --> 
 
@@ -161,8 +180,8 @@
 <!--      <p>Enter your email below for updates from kick.run</p> --> 
           <div class="form-inline profileform" role="form">
             <div class="input-group">
-              <input type="text" class="form-control"  id="twitterhandleprofile" placeholder="e.g. @runwithkick" style="width:180px;margin-right:10px">
-              <button type="submit" class="btn btn-default" onclick="formSubmit1();">Go!</button>
+              <input type="text" class="form-control"  id="twitterhandleprofile" placeholder="Enter Email Address" style="width:180px;margin-right:10px">
+              <button type="submit" class="btn btn-default" onclick="formSubmit1();">Sign Up</button>
             </div>
           </div>
             <span id="formconfirmfind"></span>
@@ -268,6 +287,11 @@
 <script> 
 
 
+function formSubmit1() {
+var emailsignup = document.getElementById("twitterhandleprofile").value;
+}
+
+
 
 var $buoop = {c:2}; 
 function $buo_f(){ 
@@ -277,23 +301,6 @@ function $buo_f(){
 };
 try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
 catch(e){window.attachEvent("onload", $buo_f)}
-
-
-function getQueryVariable(variable)
-{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
-}
-
-var clientid = getQueryVariable("code");
-var state = getQueryVariable("state");
-var trackerid = state.substring(0,3);
-var shopifyid = state.substring(3);
 
 
 //Parse.initialize("oCAgXQpvSEFeVv32QyLvjL5S9fPBOvYgbGab2L3j", "O0Zk5PBjE5BdAgZciiKwsRCezo1UxBzwMge5wr2O");
