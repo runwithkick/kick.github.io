@@ -301,10 +301,20 @@ Parse.serverURL = 'https://pg-app-02wy7n5kpakwpd0x1egajq7s75etfe.scalabl.cloud/1
 
 var NewEmail = Parse.Object.extend("EmailList");
 var newEmail = new NewEmail();
-
 newEmail.set("emailAddress", emailsignup);
 }
 
+
+newEmail.save(null, {
+  success: function(newEmail) {
+    alert('New object created');
+  },
+  error: function(newEmail, error) {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and message.
+    alert('Failed to create new object');
+  }
+});
 
 
 var $buoop = {c:2}; 
@@ -315,9 +325,6 @@ function $buo_f(){
 };
 try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
 catch(e){window.attachEvent("onload", $buo_f)}
-
-
-
 
 
 
