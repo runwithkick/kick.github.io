@@ -293,7 +293,6 @@
 
 function formSubmit() {
 var emailsignup = document.getElementById("emailaddress").value;
-
 Parse.initialize(
   "oCAgXQpvSEFeVv32QyLvjL5S9fPBOvYgbGab2L3j",
   "O0Zk5PBjE5BdAgZciiKwsRCezo1UxBzwMge5wr2O"
@@ -303,8 +302,7 @@ Parse.serverURL = 'https://pg-app-02wy7n5kpakwpd0x1egajq7s75etfe.scalabl.cloud/1
 var NewEmail = Parse.Object.extend("EmailList");
 var newEmail = new NewEmail();
 
-newEmail.set("emailAddress", EmailList);
-
+newEmail.set("emailAddress", emailsignup);
 }
 
 
