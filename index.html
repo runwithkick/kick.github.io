@@ -176,9 +176,10 @@
 
 <!-- Begin MailChimp Signup Form --> 
 
-      <div class="cards twoinrow">
-        <div class="border-below">
+    <div class="cards twoinrow">
+      <div class="border-below">
 <!--      <p>Enter your email below for updates from kick.run</p> --> 
+      <div id="formremove">
           <div class="form-inline profileform" role="form">
             <div class="input-group">
               <input type="text" class="form-control"  id="emailaddress" placeholder="Enter Email Address" style="width:160px;margin-right:10px">
@@ -186,7 +187,9 @@
             </div>
           </div>
         </div>
+           <span id="formconfirm"></span>
       </div>
+    </div>
 
 
 
@@ -308,12 +311,16 @@ newEmail.set("emailAddress", emailsignup);
 
 newEmail.save(null, {
   success: function(newEmail) {
-    alert('New object created');
+
+    document.getElementById("formconfirm").innerHTML = "<p>Thanks! We'll be in touch with updates about Kick</p>";
+    var elem = document.getElementById("formremove");
+    elem.parentNode.removeChild(elem);
+
   },
   error: function(newEmail, error) {
     // Execute any logic that should take place if the save fails.
     // error is a Parse.Error with an error code and message.
-    alert('Failed to create new object');
+    alert("It looks like there's been an issue, please try again");
   }
 });
 
