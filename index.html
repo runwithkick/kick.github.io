@@ -175,11 +175,6 @@
 <p class="subheaders">Coming soon, Kick is a completely new approach to buying your running gear. The more you run, the more discount you earn. Enter your email address below for updates.</p>
 
 <!-- Begin MailChimp Signup Form --> 
-<div id="mc_embed_signup">
-  <form action="//run.us13.list-manage.com/subscribe/post?u=85dd3c181c840fe2e4376baee&amp;id=60ef8ca216" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-
-
 
       <div class="cards twoinrow">
         <div class="border-below">
@@ -193,9 +188,7 @@
         </div>
       </div>
 
-    </div>
-  </form>
-</div>
+
 
 <!--End mc_embed_signup-->
 
@@ -298,8 +291,20 @@
 <script> 
 
 
-function formSubmit1() {
-var emailsignup = document.getElementById("twitterhandleprofile").value;
+function formSubmit() {
+var emailsignup = document.getElementById("emailaddress").value;
+
+Parse.initialize(
+  "oCAgXQpvSEFeVv32QyLvjL5S9fPBOvYgbGab2L3j",
+  "O0Zk5PBjE5BdAgZciiKwsRCezo1UxBzwMge5wr2O"
+);
+Parse.serverURL = 'https://pg-app-02wy7n5kpakwpd0x1egajq7s75etfe.scalabl.cloud/1/';
+
+var NewEmail = Parse.Object.extend("EmailList");
+var newEmail = new NewEmail();
+
+newEmail.set("emailAddress", EmailList);
+
 }
 
 
@@ -314,19 +319,8 @@ try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
 catch(e){window.attachEvent("onload", $buo_f)}
 
 
-//Parse.initialize("oCAgXQpvSEFeVv32QyLvjL5S9fPBOvYgbGab2L3j", "O0Zk5PBjE5BdAgZciiKwsRCezo1UxBzwMge5wr2O");
 
 
-Parse.initialize(
-  "oCAgXQpvSEFeVv32QyLvjL5S9fPBOvYgbGab2L3j",
-  "O0Zk5PBjE5BdAgZciiKwsRCezo1UxBzwMge5wr2O"
-);
-Parse.serverURL = 'https://pg-app-02wy7n5kpakwpd0x1egajq7s75etfe.scalabl.cloud/1/';
-
-var NewEmail = Parse.Object.extend("EmailList");
-var newEmail = new NewEmail();
-
-newEmail.set("emailAddress", emailAddress);
 
 
 </script> 
